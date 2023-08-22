@@ -17,6 +17,7 @@ import Header from './components/header';
           <Route path="/" element={<Quotes />} />
           <Route path='/Favourites' element={<Favourites />} />
         </Routes>
+        
       </div>
     </BrowserRouter>
     );
