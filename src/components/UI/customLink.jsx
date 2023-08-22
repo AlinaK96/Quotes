@@ -1,6 +1,6 @@
 import React from "react"
 import { NavLink } from 'react-router-dom';
-import classes from './customBtn.module.css'
+import classes from './customLink.module.css'
 
 
 const CustomBtn = ({title, link}) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import fav from '../assets/img/fav.svg'
+import CustonBtn from "./UI/button/customBtn";
 const QuoteItem = (props) => {
     return (
         <div className="quotes__box">
@@ -7,7 +7,7 @@ const QuoteItem = (props) => {
             <hr />
             <div className="quotes__box__footer">
                 <span>{props.post.auth}</span>
-                <img src={fav} alt="Упс.." />
+                <CustonBtn />
             </div>
 
         </div>

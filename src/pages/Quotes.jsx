@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import QuotesList from '../components/quotesList';
-import CustomBtn from "../components/UI/customBtn";
+import CustomBtn from "../components/UI/customLink";
 
 const Quotes = () => {
     const getQuotes = async () => {
