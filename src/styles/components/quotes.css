@@ -6,3 +6,34 @@
     justify-content: space-around;
     gap: 20px;
 }
+
+.quotes__box{
+    max-height: 350px;
+    max-width: 350px;
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(164, 133, 122, 0.32);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(164, 133, 122, 0.32);
+    box-shadow: 4px 4px 8px 0px rgba(164, 133, 122, 0.32);
+}
+
+.quotes__box p{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.quotes__box hr{
+    margin: 5px 0;
+    width: 50%;
+    height: 2px;
+    background-color: var(--background-secondary);
+}
+
+.quotes__box span {
+    color: var(--font-light);
+    font-style: italic;
+    font-weight: 600;
+}

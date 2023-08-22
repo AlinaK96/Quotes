@@ -1,6 +1,8 @@
 :root{
     --background--primary: #e4ecfc;
-    --background-secondary: #052718;
+    --background-secondary: #405f73;
 
-    --font-light: #e4ecfc;
+    --font-light: #98928a;
+
+    --border: #a4857a;
 }
