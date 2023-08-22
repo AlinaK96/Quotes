@@ -8,8 +8,8 @@
 }
 
 .quotes__box{
-    max-height: 350px;
-    max-width: 350px;
+    height: 150px;
+    width: 350px;
     padding: 15px;
     border: 1px solid var(--border);
     border-radius: 10px;
@@ -19,9 +19,10 @@
 }
 
 .quotes__box p{
+    padding-top: 5px;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp:3;
     -webkit-box-orient: vertical;
 }
 
@@ -39,6 +40,7 @@
 }
 
 .quotes__box span {
+    padding-top: 5px;
     color: var(--font-light);
     font-style: italic;
     font-weight: 600;

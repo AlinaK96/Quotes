@@ -10,7 +10,7 @@ function Quotes() {
     useEffect(() => {
         const fetchData = async () => {
             const result = await axios(
-                'https://dummyjson.com/quotes?skip=0&limit=100',
+                'https://dummyjson.com/quotes?skip=0&limit=10',
             );
             setquotes(result.data.quotes);
         };
