@@ -1,12 +1,13 @@
 import React from "react"
+import { NavLink } from 'react-router-dom';
 import classes from './customBtn.module.css'
 
 
 const CustomBtn = ({title, link}) => {
 return (
-    <a href={link} className={classes.link__fav}>
+    <NavLink to={link} className={classes.link__fav}>
         {title}
-    </a>
+    </NavLink>
 )
 };
 

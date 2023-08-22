@@ -32,8 +32,19 @@
     background-color: var(--background-secondary);
 }
 
+.quotes__box__footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .quotes__box span {
     color: var(--font-light);
     font-style: italic;
     font-weight: 600;
+}
+
+.quotes__box img{
+    width: 25px;
+    height: 25px;
 }

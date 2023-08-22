@@ -1,5 +1,5 @@
 import React from "react"
-import CustomBtn from "../components/UI/favourites/customBtn";
+import CustomBtn from "../components/UI/customBtn";
 
 const Favourites = () => {
 return (
