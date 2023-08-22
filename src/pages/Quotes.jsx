@@ -6,13 +6,18 @@ import QuotesList from '../components/quotesList';
 
 function Quotes() {
     const [quotes, setquotes] = useState([]);
+    const [page, setPage] = useState(1);
+    const [isLoading, setLoading] = useState(false);
 
     useEffect(() => {
+        
         const fetchData = async () => {
+            setLoading(true);
             const result = await axios(
                 'https://dummyjson.com/quotes?skip=0&limit=10',
             );
             setquotes(result.data.quotes);
+            setLoading(false)
         };
         fetchData();
     }, []);
