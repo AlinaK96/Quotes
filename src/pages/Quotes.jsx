@@ -2,17 +2,15 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
 import CustomBtn from "../components/UI/customLink";
-import QuotesList from '../components/quotesList';
+import Pagination from '../components/pagination';
 
 function Quotes() {
     const [quotes, setquotes] = useState([]);
-    const [page, setPage] = useState(1);
-    
-    useEffect(() => {
-        
+
+    useEffect(() => {    
         const fetchData = async () => {
             const result = await axios(
-                'https://dummyjson.com/quotes?skip=0&limit=10',
+                'https://dummyjson.com/quotes?skip=0&limit=100',
             );
             setquotes(result.data.quotes);
         };
@@ -22,7 +20,8 @@ function Quotes() {
     return (
         <div>
             <CustomBtn title='Favourites' link='/Favourites'/>
-            <QuotesList quotes={quotes} />
+            <Pagination pageDataLimit={10} quotes={quotes} />
+
         </div>
 
     );
