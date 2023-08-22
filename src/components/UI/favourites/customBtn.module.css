@@ -1,0 +1,19 @@
+.link__fav,
+.link__fav:visited{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 22px;
+    color: var(--background-secondary); 
+    font-weight: bold;
+    padding: 20px;
+    line-height: 1;
+    -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+
+.link__fav:hover{
+    color: #052718; 
+    -webkit-text-shadow: 2px 2px 2px #98928a;
+    -moz-text-shadow: 2px 2px 2px #98928a;
+        text-shadow: 2px 2px 2px #98928a;
+}

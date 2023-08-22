@@ -1,7 +1,8 @@
 import React, { useState } from "react"
 import QuotesList from '../components/quotesList';
+import CustomBtn from "../components/UI/favourites/customBtn";
 
-const QuotesPage = () => {
+const Quotes = () => {
     const [quotes, setQuotes] = useState ([
         {id: 1, content: "Life isn’t about getting and having, it’s about giving and being.", auth: '"Kevin Kruse"'},
         {id: 2, content: "Life is 10% what happens to me and 90% of how I react to it.", auth: 'Автозаполнение'},
@@ -17,9 +18,10 @@ const QuotesPage = () => {
     ])
     return (
         <div>
+            <CustomBtn title='Favourites' link='/Favourites'/>
             <QuotesList quotes={quotes} />
         </div>
 )
 };
 
-export default QuotesPage;
+export default Quotes;
