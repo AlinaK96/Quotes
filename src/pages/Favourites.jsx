@@ -5,7 +5,7 @@ const Favourites = () => {
 return (
     <div>
         <CustomBtn title='All quotes' link='/' />
-        <p>My favourite quotes: </p>
+        <p className="favourites__header">My favourite quotes: </p>
     </div>
 )
 };
