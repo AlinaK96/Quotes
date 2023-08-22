@@ -1,14 +1,14 @@
 .quotes__container{
     margin: 20px;
+    justify-content: space-around;
+    gap: 20px; 
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
-    gap: 20px;
 }
 
 .quotes__box{
-    height: 150px;
+    height: 140px;
     width: 350px;
     padding: 15px;
     border: 1px solid var(--border);

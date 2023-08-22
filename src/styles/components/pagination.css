@@ -1,0 +1,43 @@
+.page__content {
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.page__change {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background-color: var(--main-background);
+    color: white;
+    cursor: pointer;
+}
+
+.disabled {
+    cursor: not-allowed;
+    opacity: .7;
+}
+
+
+.page__content__number {
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    margin: 0 0.25rem;
+    cursor: pointer;
+}
+
+.active {
+    border: 2px solid var(--background-secondary);
+    background-color: var(--background--primary);
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(64, 95, 115, 0.65);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(64, 95, 115, 0.65);
+    box-shadow: 4px 4px 8px 0px rgba(64, 95, 115, 0.65);
+}

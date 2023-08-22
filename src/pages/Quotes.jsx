@@ -20,8 +20,7 @@ function Quotes() {
     return (
         <div>
             <CustomBtn title='Favourites' link='/Favourites'/>
-            <Pagination pageDataLimit={10} quotes={quotes} />
-
+            <Pagination pageLimit={10} quotes={quotes} />
         </div>
 
     );
