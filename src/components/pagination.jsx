@@ -13,6 +13,8 @@ const Pagination = ({ pageLimit, quotes }) => {
 
     const nextPage = () => setcurrentPageNumber((prev) => prev + 1);
     const previousPage = () => setcurrentPageNumber((prev) => prev - 1);
+    const firstPage = () => setcurrentPageNumber(1)
+    const lastPage = () => setcurrentPageNumber(pageLimit)
     const changePageTo = (pageNumber) => setcurrentPageNumber(pageNumber);
     const getPageData = () => {
         const startIndex = currentPageNumber * pageLimit - pageLimit;
@@ -47,6 +49,13 @@ const Pagination = ({ pageLimit, quotes }) => {
                 <button
                     className={`page__change ${currentPageNumber === 1 ? "disabled" : ""}  `}
                     disabled={currentPageNumber === 1}
+                    onClick={firstPage}>
+                    Begining
+                </button>
+
+                <button
+                    className={`page__change ${currentPageNumber === 1 ? "disabled" : ""}  `}
+                    disabled={currentPageNumber === 1}
                     onClick={previousPage}>
                     Previous
                 </button>
@@ -74,6 +83,15 @@ const Pagination = ({ pageLimit, quotes }) => {
                         ? "disabled" : ""}  `}
                     onClick={nextPage}>
                 Next
+                </button>
+
+                <button
+                    disabled={currentPageNumber === Math.floor(quotes.length / pageLimit)}
+                    className={`page__change ${
+                    currentPageNumber === Math.floor(quotes.length / pageLimit)
+                        ? "disabled" : ""}  `}
+                    onClick={lastPage}>
+                    End
                 </button>
             </div>
         </div>
