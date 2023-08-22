@@ -1,0 +1,30 @@
+header{
+    min-height: 20vh;
+    background-color: var(--background-secondary);
+    -webkit-box-shadow: 12px 14px 21px 0px rgba(5, 39, 24, 0.46);
+    -moz-box-shadow: 12px 14px 21px 0px rgba(5, 39, 24, 0.46);
+    box-shadow: 12px 14px 21px 0px rgba(5, 39, 24, 0.46);
+    padding: 15px 25px;
+    text-align: center;
+}
+
+.header h1{
+    color: white;
+    font-size: 42px;
+    text-transform: capitalize;
+}
+
+.header h3{
+    color: var(--font-light);
+    font-size: 26px;
+}
+
+@media (max-width: 575px) {
+    .header h1{
+        font-size: 31px;
+    }
+
+    .header h3{
+        font-size: 22px;
+    }
+}

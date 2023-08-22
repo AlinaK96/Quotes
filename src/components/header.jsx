@@ -2,9 +2,9 @@ import React from "react"
 
 const Header = () => {
 return (
-    <header className="App-header">
-        <h5>Phrases to exercise</h5>
-        <h2>your emotional intelligence</h2>
+    <header className="header">
+        <h3>Phrases to exercise your </h3>
+        <h1>emotional intelligence</h1>
     </header>
 )
 };
