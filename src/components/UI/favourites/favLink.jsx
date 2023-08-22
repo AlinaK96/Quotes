@@ -1,7 +1,7 @@
 import React from "react"
 import classes from './favLink.module.css'
 
-const FavBtn = () => {
+const favLink = () => {
 return (
     <a href="/" className={classes.link__fav}>
         Favourites
@@ -9,4 +9,4 @@ return (
 )
 };
 
-export default FavBtn;
+export default favLink;
