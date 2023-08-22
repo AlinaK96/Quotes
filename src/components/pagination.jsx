@@ -23,7 +23,6 @@ const Pagination = ({ pageLimit, quotes }) => {
     };
     const getPageNumberGroup = () => {
         let start = Math.floor((currentPageNumber - 1) / 3) * 3;
-        console.log(new Array(3).fill(" ").map((_, index) => start + index + 1));
         return new Array(3).fill(" ").map((_, index) => start + index + 1);
     };
 
@@ -32,7 +31,7 @@ const Pagination = ({ pageLimit, quotes }) => {
             <div className="quotes__container">
                 {currPagequotes.map(({ id, quote, author }) => {
                     return (
-                        <div className="quotes__box">
+                        <div className="quotes__box" key={id}>
                             <p>{quote}</p>
                             <hr />
                             <div className="quotes__box__footer">
