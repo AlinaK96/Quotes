@@ -18,17 +18,16 @@ import Header from './components/header';
 
     return (
       !loading && (
-
-    <BrowserRouter>
-      <div>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Quotes />} />
-          <Route path='/Favourites' element={<Favourites />} />
-        </Routes>
-        
-      </div>
-    </BrowserRouter> )
+        <BrowserRouter>
+          <div>
+            <Header />
+            <Routes>
+              <Route path="/" element={<Quotes />} />
+              <Route path='/Favourites' element={<Favourites />} />
+            </Routes>
+          </div>
+        </BrowserRouter> 
+      )
     );
   }
   

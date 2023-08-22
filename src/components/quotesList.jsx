@@ -5,7 +5,7 @@ const QuotesList = ({quotes}) => {
 
     return (
         <div className="quotes__container">
-            {quotes.map((quote, index) => (
+            {quotes.map((quote) => (
                 <QuoteItem  post={quote} key={quote.id}/>  
             ))}
         </div>
