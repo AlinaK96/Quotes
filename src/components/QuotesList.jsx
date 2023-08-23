@@ -5,6 +5,7 @@ const Pagination = ({ pageLimit, quotes }) => {
     const [currentPageNumber, setcurrentPageNumber] = useState(1);
     const [currPagequotes, setCurrPagequotes] = useState([]);
     const [pageNumberGroup, setPageNumberGroup] = useState([]);
+    const [favQuote, setFavQuote] = useState(false)
 
     useEffect(() => {
         setCurrPagequotes(getPageData());
@@ -26,6 +27,11 @@ const Pagination = ({ pageLimit, quotes }) => {
         return new Array(3).fill(" ").map((_, index) => start + index + 1);
     };
 
+    const addToFavourites = () => {
+        alert('Add to fav')
+    }
+
+
     return (
         <div>
             <div className="quotes__container">
@@ -36,7 +42,7 @@ const Pagination = ({ pageLimit, quotes }) => {
                             <hr />
                             <div className="quotes__box__footer">
                                 <span>{author}</span>
-                                <CustonBtn />
+                                <CustonBtn addToFavourites={addToFavourites}/>
                             </div>
                         </div>
 

@@ -1,9 +1,8 @@
 import React from "react"
-import classes from './customBtn.module.css'
 
 const CustonBtn = (props) => {
     return (
-        <button className={classes.favourites__btn}>
+        <button className="favourites__btn" onClick={props.addToFavourites} title="add to favourites">
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 900.000000 800.000000" preserveAspectRatio="xMidYMid meet">
             <g transform="translate(0.000000,800.000000) scale(0.100000,-0.100000) "fill="currentColor" stroke="none">
             <path d="M2410 7583 c-420 -27 -733 -190 -861 -449 l-44 -88 0 -335 c0 -377 2

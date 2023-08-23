@@ -51,3 +51,11 @@
     width: 25px;
     height: 25px;
 }
+
+.favourites__btn svg{
+    color: var(--border);
+}
+
+.fav svg{
+    color: var(--background-secondary);
+}
