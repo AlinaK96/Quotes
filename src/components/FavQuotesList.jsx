@@ -1,21 +1,20 @@
 import React from "react"
-import RemoveBtn from "./UI/button/removeBtn";
 
-const FavQuotes = ({Favquotes}) => {
-    const RemoveFav = () => {
-        alert('Remove from fav')
+const FavQuotes = ({ favorites, onRemove }) => {
+    if (favorites.length === 0) {
+        return <div>Пока нет элементов в избранном</div>;
     }
-
+    
     return (
         <div className="quotes__container">
-            {Favquotes.map(({ id, quote, author }) => {
+            {favorites.map((favorite) => {
                 return (
-                    <div className="quotes__box" key={id}>
-                        <p>{quote}</p>
+                    <div className="quotes__box" key={favorite.id}>
+                        <p>{favorite.quote}</p>
                         <hr />
                         <div className="quotes__box__footer">
-                            <span>{author}</span>
-                            <RemoveBtn RemoveFav={RemoveFav} />
+                            <span>{favorite.author}</span>
+                            <button onClick={() => onRemove(favorite)}>Убрать </button>
                         </div>
                     </div>
                 );

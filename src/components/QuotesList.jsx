@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from "react"
 import ListItem from "./listItem";
+import FavoriteList from "../pages/FavoriteList";
+import FavQuotes from "./FavQuotesList";
 
 const Pagination = ({ pageLimit, quotes, setquotes }) => {
     const [currentPageNumber, setcurrentPageNumber] = useState(1);
@@ -28,9 +30,12 @@ const Pagination = ({ pageLimit, quotes, setquotes }) => {
     };
 
     const addToFavourites = (item) => {
-        alert('Add to fav')
         setFavorites([...favorites, item]);
     };
+
+    const removeFromFavorites = (item) => {
+        setFavorites(favorites.filter((i) => i.id !== item.id));
+    }; 
 
     return (
         <div>
@@ -39,6 +44,10 @@ const Pagination = ({ pageLimit, quotes, setquotes }) => {
                     <ListItem item={item} key={item.id} onClick={addToFavourites} />
                 ))}
             </div>
+
+            <h2>Избранные элементы</h2>
+            <FavQuotes  favorites={favorites} onRemove={removeFromFavorites}/>
+            {/* <FavoriteList favorites={favorites} onRemove={removeFromFavorites} /> */}
 
             <div className="page__content">
                 <button
