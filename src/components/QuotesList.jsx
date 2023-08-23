@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react"
 import ListItem from "./listItem";
-import FavoriteList from "../pages/FavoriteList";
 import FavQuotes from "./FavQuotesList";
 
 const Pagination = ({ pageLimit, quotes, setquotes }) => {
@@ -47,21 +46,20 @@ const Pagination = ({ pageLimit, quotes, setquotes }) => {
 
             <h2>Избранные элементы</h2>
             <FavQuotes  favorites={favorites} onRemove={removeFromFavorites}/>
-            {/* <FavoriteList favorites={favorites} onRemove={removeFromFavorites} /> */}
 
             <div className="page__content">
                 <button
                     className={`page__change ${currentPageNumber === 1 ? "disabled" : ""}  `}
                     disabled={currentPageNumber === 1}
                     onClick={firstPage}>
-                    Begining
+                    В начало
                 </button>
 
                 <button
                     className={`page__change ${currentPageNumber === 1 ? "disabled" : ""}  `}
                     disabled={currentPageNumber === 1}
                     onClick={previousPage}>
-                    Previous
+                    Назад
                 </button>
 
                 <ul className="page__content">
@@ -86,7 +84,7 @@ const Pagination = ({ pageLimit, quotes, setquotes }) => {
                     currentPageNumber === Math.floor(quotes.length / pageLimit)
                         ? "disabled" : ""}  `}
                     onClick={nextPage}>
-                Next
+                Вперёд
                 </button>
 
                 <button
@@ -95,7 +93,7 @@ const Pagination = ({ pageLimit, quotes, setquotes }) => {
                     currentPageNumber === Math.floor(quotes.length / pageLimit)
                         ? "disabled" : ""}  `}
                     onClick={lastPage}>
-                    End
+                    В конец
                 </button>
             </div>
         </div>

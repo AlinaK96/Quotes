@@ -19,7 +19,7 @@ function Quotes() {
 
     return (
         <div>
-            <CustomBtn title='Favourites' link='/Favourites'/>
+            <CustomBtn title='Избранное' link='/Favourites'/>
             <QuotesList pageLimit={10} quotes={quotes} setquotes={setquotes} />
         </div>
 

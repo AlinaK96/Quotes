@@ -18,12 +18,11 @@ const Favourites = () => {
         quote:"I'm not a great writer. I write badly.",
         author:'Ne',
     }
-    
     ]
     return (
         <div>
-            <CustomBtn title='All quotes' link='/' />
-            <p className="favourites__header">My favourite quotes: </p>
+            <CustomBtn title='Все цитаты' link='/' />
+            <p className="favourites__header">Избранное: </p>
             <FavQuotes Favquotes={Favquotes}/>
         </div>
     )
