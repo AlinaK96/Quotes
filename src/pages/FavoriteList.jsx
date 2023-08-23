@@ -4,17 +4,17 @@ const FavoriteList = ({ favorites, onRemove }) => {
   if (favorites.length === 0) {
     return <div>Пока нет элементов в избранном</div>;
   }
- 
-  return (
-    <div>
-      {favorites.map((favorite) => (
-        <div key={favorite.id}>
-          <h3>{favorite.quote}</h3>
-          <button onClick={() => onRemove(favorite)}>Убрать из избранного</button>
+
+    return (
+        <div>
+        {favorites.map((favorite) => (
+            <div key={favorite.id}>
+            <h3>{favorite.title}</h3>
+            <button onClick={() => onRemove(favorite)}>Убрать из избранного</button>
+            </div>
+        ))}
         </div>
-      ))}
-    </div>
-  );
+    );
 };
- 
+
 export default FavoriteList;

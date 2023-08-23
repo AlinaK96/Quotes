@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react"
-import CustonBtn from "./UI/button/customBtn";
+import ListItem from "./listItem";
 
 const Pagination = ({ pageLimit, quotes, setquotes }) => {
     const [currentPageNumber, setcurrentPageNumber] = useState(1);
@@ -29,24 +29,15 @@ const Pagination = ({ pageLimit, quotes, setquotes }) => {
 
     const addToFavourites = (item) => {
         alert('Add to fav')
+        setFavorites([...favorites, item]);
     };
 
     return (
         <div>
             <div className="quotes__container">
-                {currPagequotes.map(({ id, quote, author }) => {
-                    return (
-                        <div className="quotes__box" key={id}>
-                            <p>{quote}</p>
-                            <hr />
-                            <div className="quotes__box__footer">
-                                <span>{author}</span>
-                                <CustonBtn addToFavourites={addToFavourites}/>
-                            </div>
-                        </div>
-
-                    );
-                })}
+                {currPagequotes.map((item) => (
+                    <ListItem item={item} key={item.id} onClick={addToFavourites} />
+                ))}
             </div>
 
             <div className="page__content">

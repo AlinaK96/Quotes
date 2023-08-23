@@ -52,15 +52,12 @@
     height: 25px;
 }
 
-.favourites__btn svg{
-    color: var(--border);
+.favourites__btn{
+    color: var(--font-light);
+    font-weight: 600;
 }
 
 .favourites__btn:hover{
     transition: 0.6s;
-    transform: rotate(360deg);
-}
 
-.fav svg{
-    color: var(--background-secondary);
 }
