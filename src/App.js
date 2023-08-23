@@ -4,9 +4,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Quotes from './pages/Quotes';
 import Favourites from './pages/Favourites';
 import Header from './components/header';
-import ListItem from './components/listItem';
-import FavouriteList from './pages/FavoriteList';
-
 
   function App() {
     const [loading, setLoading] = useState(true);
@@ -18,20 +15,6 @@ import FavouriteList from './pages/FavoriteList';
       }, 2000);
     }
 
-    const [list, setList] = useState([
-      { id: 1, title: "Элемент 1" },
-    ]);
-   
-    const [favorites, setFavorites] = useState([]);
-   
-    const addToFavorites = (item) => {
-      setFavorites([...favorites, item]);
-    };
-   
-    const removeFromFavorites = (item) => {
-      setFavorites(favorites.filter((i) => i.id !== item.id));
-      setList([...list, item]);
-    }; 
     return (
       !loading && (
         <BrowserRouter>
@@ -41,12 +24,6 @@ import FavouriteList from './pages/FavoriteList';
               <Route path="/" element={<Quotes />} />
               <Route path='/Favourites' element={<Favourites />} />
             </Routes>
-
-            {list.map((item) => (
-              <ListItem item={item} key={item.id} onClick={addToFavorites} />
-            ))}
-
-            <FavouriteList favorites={favorites} onRemove={removeFromFavorites} />
           </div>
         </BrowserRouter> 
       )
