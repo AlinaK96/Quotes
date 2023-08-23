@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from "react"
 import CustonBtn from "./UI/button/customBtn";
 
-const Pagination = ({ pageLimit, quotes }) => {
+const Pagination = ({ pageLimit, quotes, setquotes }) => {
     const [currentPageNumber, setcurrentPageNumber] = useState(1);
     const [currPagequotes, setCurrPagequotes] = useState([]);
     const [pageNumberGroup, setPageNumberGroup] = useState([]);
-    const [favQuote, setFavQuote] = useState(false)
+    const [favorites, setFavorites] = useState([]);
 
     useEffect(() => {
         setCurrPagequotes(getPageData());
@@ -27,10 +27,9 @@ const Pagination = ({ pageLimit, quotes }) => {
         return new Array(3).fill(" ").map((_, index) => start + index + 1);
     };
 
-    const addToFavourites = () => {
+    const addToFavourites = (item) => {
         alert('Add to fav')
-    }
-
+    };
 
     return (
         <div>
