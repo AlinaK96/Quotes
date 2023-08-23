@@ -1,9 +1,9 @@
 import React from "react"
 
 const FavQuotes = ({ favorites, onRemove }) => {
-    if (favorites.length === 0) {
-        return <div>Пока нет элементов в избранном</div>;
-    }
+    // if (favorites.length < 0) {
+    //     return <div className="favourites__header">Нет избранных цитат</div>;
+    // }
     
     return (
         <div className="quotes__container">
@@ -14,7 +14,7 @@ const FavQuotes = ({ favorites, onRemove }) => {
                         <hr />
                         <div className="quotes__box__footer">
                             <span>{favorite.author}</span>
-                            <button onClick={() => onRemove(favorite)}>Убрать </button>
+                            <button className="favourites__btn" onClick={() => onRemove(favorite)}>удалить </button>
                         </div>
                     </div>
                 );
