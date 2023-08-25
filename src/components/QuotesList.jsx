@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react"
 import ListItem from "./listItem";
-//import FavQuotes from "./FavQuotesList";
+import FavQuotes from "./FavQuotesList";
 
 const Pagination = ({ pageLimit, quotes, setquotes }) => {
     const [currentPageNumber, setcurrentPageNumber] = useState(1);
@@ -33,9 +33,9 @@ const Pagination = ({ pageLimit, quotes, setquotes }) => {
         localStorage.setItem('favourites', JSON.stringify(favorites) || [{}])
     };
     
-    // const removeFromFavorites = (item) => {
-    //     setFavorites(favorites.filter((i) => i.id !== item.id));
-    // }; 
+    const removeFromFavorites = (item) => {
+        setFavorites(favorites.filter((i) => i.id !== item.id));
+    }; 
 
     return (
         <div>
@@ -45,7 +45,7 @@ const Pagination = ({ pageLimit, quotes, setquotes }) => {
                 ))}
             </div>
 
-            {/* <FavQuotes  favorites={favorites} onRemove={removeFromFavorites}/> */}
+            
 
             <div className="page__content">
                 <button
@@ -96,6 +96,8 @@ const Pagination = ({ pageLimit, quotes, setquotes }) => {
                     В конец
                 </button>
             </div>
+            
+            <FavQuotes  favorites={favorites} onRemove={removeFromFavorites}/>
         </div>
     )
 };

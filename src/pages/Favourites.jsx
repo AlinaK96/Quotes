@@ -1,16 +1,13 @@
 import React from "react"
 import CustomBtn from "../components/UI/customLink";
-import FavQuotes from "../components/FavQuotesList";
+// import FavQuotes from "../components/FavQuotesList";
 
 const Favourites = () => {
-    const result = JSON.parse(localStorage.getItem("favourites"))
-    console.log(result);
-
     return (
         <div>
             <CustomBtn title='Все цитаты' link='/' />
             <p className="favourites__header">Избранное: </p>
-            <FavQuotes favorites={result}  />
+            {/* <FavQuotes favorites={result} onRemove={Delete}  /> */}
         </div>
     )
 };
