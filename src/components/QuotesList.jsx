@@ -30,11 +30,8 @@ const Pagination = ({ pageLimit, quotes, setquotes }) => {
 
     const addToFavourites = (item) => {
         setFavorites([...favorites, item]);
-        localStorage.setItem('favourites', JSON.stringify(favorites))
+        localStorage.setItem('favourites', JSON.stringify(favorites) || [{}])
     };
-
-    const result = JSON.parse(localStorage.getItem("favourites"))
-    console.log(result);
     
     // const removeFromFavorites = (item) => {
     //     setFavorites(favorites.filter((i) => i.id !== item.id));

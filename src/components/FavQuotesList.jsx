@@ -9,7 +9,7 @@ const FavQuotes = ({ favorites, onRemove }) => {
         <div className="quotes__container">
             {favorites.map((favorite) => {
                 return (
-                    <div className="quotes__box" key={favorite.id}>
+                    <div className="quotes__box" key={favorites.id}>
                         <p>{favorite.quote}</p>
                         <hr />
                         <div className="quotes__box__footer">

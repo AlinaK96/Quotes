@@ -4,6 +4,7 @@ import FavQuotes from "../components/FavQuotesList";
 
 const Favourites = () => {
     const result = JSON.parse(localStorage.getItem("favourites"))
+    console.log(result);
 
     return (
         <div>
