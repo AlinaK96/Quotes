@@ -96,7 +96,6 @@ const Pagination = ({ pageLimit, quotes, setquotes }) => {
                     В конец
                 </button>
             </div>
-            
             <FavQuotes  favorites={favorites} onRemove={removeFromFavorites}/>
         </div>
     )
