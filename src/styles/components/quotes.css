@@ -45,6 +45,10 @@
     color: var(--font-light);
     font-style: italic;
     font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 110px;
 }
 
 .quotes__box img{
