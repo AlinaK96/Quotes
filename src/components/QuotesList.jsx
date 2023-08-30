@@ -2,11 +2,10 @@ import React, {useEffect, useState} from "react"
 import ListItem from "./listItem";
 import FavQuotes from "./FavQuotesList";
 
-const Pagination = ({ pageLimit, quotes, setquotes }) => {
+const Pagination = ({ pageLimit, quotes, setquotes, favorites, setFavorites }) => {
     const [currentPageNumber, setcurrentPageNumber] = useState(1);
     const [currPagequotes, setCurrPagequotes] = useState([]);
     const [pageNumberGroup, setPageNumberGroup] = useState([]);
-    const [favorites, setFavorites] = useState([]);
 
     useEffect(() => {
         setCurrPagequotes(getPageData());

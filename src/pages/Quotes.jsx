@@ -7,6 +7,7 @@ import FilteredList from './Filtered';
 
 function Quotes() {
     const [quotes, setquotes] = useState([]);
+    const [favorites, setFavorites] = useState([]);
 
     useEffect(() => {    
         const fetchData = async () => {
@@ -21,8 +22,8 @@ function Quotes() {
     return (
         <div>
             <CustomBtn title='Избранное' link='/Favourites'/>
-            <FilteredList quotes={quotes} />
-            <QuotesList pageLimit={10} quotes={quotes} setquotes={setquotes} />
+            <FilteredList quotes={quotes} favorites={favorites} setFavorites={setFavorites} />
+            <QuotesList pageLimit={10} quotes={quotes} setquotes={setquotes} favorites={favorites} setFavorites={setFavorites} />
         </div>
 
     );

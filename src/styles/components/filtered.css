@@ -28,3 +28,8 @@
 .custom__select option { 
     font-weight:normal; 
 } 
+
+.filted{
+    display: flex;
+    justify-content: space-evenly !important; 
+}
