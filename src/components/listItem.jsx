@@ -5,7 +5,7 @@ import ToolTip from "./UI/tooltips/tooltip";
 const ListItem = ({ item, onClick }) => {
     return (
         <div className="quotes__box">
-            <ToolTip item={item.quote}></ToolTip>
+            <ToolTip item={item}></ToolTip>
             <p>{item.quote}</p>
             <hr />
             <div className="quotes__box__footer">

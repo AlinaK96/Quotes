@@ -2,7 +2,12 @@ import React from "react"
 
 const ToolTip = ({item}) => {
     return (
-        <span className="tooltip">{item}</span>
+        <div className="tooltip">
+            <span >{item.quote}</span>
+            <hr />
+            <span>{item.author}</span>
+        </div>
+        
     )
 };
 

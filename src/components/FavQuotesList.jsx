@@ -11,7 +11,7 @@ const FavQuotes = ({ favorites, onRemove }) => {
                 {favorites.map((favorite) => {
                     return (
                         <div className="quotes__box" key={favorites.id}>
-                            <ToolTip item={favorite.quote} />
+                            <ToolTip item={favorite} />
                             <p>{favorite.quote}</p>
                             <hr />
                             <div className="quotes__box__footer">
