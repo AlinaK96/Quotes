@@ -9,7 +9,9 @@ const FilteredList = ({quotes, setFavorites, favorites}) => {
         .reduce((acc, i) => i[0] ? acc.filter(i[1]) : acc, quotes),[ quotes, author ]);
 
     const addToFavourites = (i) => {
-        setFavorites([...favorites, i]);
+        if(!favorites.includes(i)){
+            setFavorites([...favorites, i]);
+        }
     }
 
     return (
