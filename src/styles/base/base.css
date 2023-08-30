@@ -15,6 +15,11 @@ body {
     width: 6em;
 }
 
+.none{
+    display: none;
+}
+
+
 .container {
     align-items: center;
     background-color: white;

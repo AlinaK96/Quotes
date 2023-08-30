@@ -3,7 +3,6 @@ import ListItem from "../components/listItem";
 
 const FilteredList = ({quotes, setFavorites, favorites}) => {
     const [ author, setAuthor ] = useState(null);
-    
 
     const authors = useMemo(() => [...new Set(quotes.map(i => i.author))],[quotes]);
     const filteredquotes = useMemo(() => [[author, i => i.author === author],]
@@ -18,10 +17,12 @@ const FilteredList = ({quotes, setFavorites, favorites}) => {
             <p className="favourites__header">Поиск: </p>
             <div className="quotes__container filted">
                 <select value={author} onChange={e => setAuthor(e.target.value)} className="custom__select">
-                    <option>Поиск...</option>
+                    <option>Поиск..</option>
                     {authors.map(i => <option>{i}</option>)}
                 </select>
-                {filteredquotes.map(i => <ListItem item={i} onClick={addToFavourites}/>)}
+                <div className= { author === null ? 'none' : ''}>
+                    {filteredquotes.map(i => <ListItem item={i} onClick={addToFavourites}/>)}
+                </div>
             </div>
         </div>
     )
