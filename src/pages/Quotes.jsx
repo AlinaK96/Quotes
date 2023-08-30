@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import CustomBtn from "../components/UI/customLink/customLink";
 import QuotesList from '../components/QuotesList';
+import FilteredList from './Filtered';
 
 function Quotes() {
     const [quotes, setquotes] = useState([]);
@@ -20,6 +21,7 @@ function Quotes() {
     return (
         <div>
             <CustomBtn title='Избранное' link='/Favourites'/>
+            <FilteredList quotes={quotes} />
             <QuotesList pageLimit={10} quotes={quotes} setquotes={setquotes} />
         </div>
 

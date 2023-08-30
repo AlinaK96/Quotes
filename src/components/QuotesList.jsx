@@ -43,7 +43,9 @@ const Pagination = ({ pageLimit, quotes, setquotes }) => {
 
     return (
         <div>
+            <p className="favourites__header">Все цитаты: </p>
             <div className="quotes__container">
+            
                 {currPagequotes.map((item) => (
                     <ListItem item={item} key={item.id} onClick={addToFavourites} />
                 ))}

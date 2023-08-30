@@ -104,6 +104,7 @@
 .quotes__box:hover,
 .quotes__box:hover .tooltip,
 .quotes__box:hover .tooltip::before {
+    border: 1px solid transparent;
     background: var(--background-secondary);
     color: #ffffff;
 }

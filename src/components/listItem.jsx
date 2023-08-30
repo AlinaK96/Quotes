@@ -9,7 +9,6 @@ const ListItem = ({ item, onClick }) => {
             <p>{item.quote}</p>
             <hr />
             <div className="quotes__box__footer">
-                {/* <span class="tooltip">uiverse.io</span> */}
                 <span className="quotes__author" >{item.author}</span>
                 <button className="favourites__btn" onClick={() => onClick(item)}> в избранное</button>
             </div>
