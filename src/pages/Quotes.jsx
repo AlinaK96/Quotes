@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
-import CustomBtn from "../components/UI/customLink";
+import CustomBtn from "../components/UI/customLink/customLink";
 import QuotesList from '../components/QuotesList';
 
 function Quotes() {
