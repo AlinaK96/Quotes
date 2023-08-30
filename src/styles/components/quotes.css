@@ -53,11 +53,18 @@
 }
 
 .favourites__btn{
-    color: var(--font-light);
-    font-weight: 600;
+    color: white;
+    padding: 5px 7px;
+    background-color: var(--background-secondary);
+    border-radius: 20px;
+    font-weight: 400;
 }
 
 .favourites__btn:hover{
+    background-color: var(--main-background);
     transition: 0.6s;
+}
 
+.favourites__btn:not(:hover){
+    transition: 0.3s;
 }
