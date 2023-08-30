@@ -1,7 +1,6 @@
 .favourites__header{
     text-align: center;
     color: var(--font-light);
-    font-size: 26px;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
 }

@@ -17,6 +17,13 @@
     cursor: pointer;
 }
 
+.page__change:not(:disabled):hover{
+    opacity: .9;
+        -webkit-box-shadow: 4px 4px 8px 0px rgba(64, 95, 115, 0.65);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(64, 95, 115, 0.65);
+    box-shadow: 4px 4px 8px 0px rgba(64, 95, 115, 0.65);
+}
+
 .disabled {
     cursor: not-allowed;
     opacity: .7;
@@ -32,6 +39,14 @@
     text-align: center;
     margin: 0 0.25rem;
     cursor: pointer;
+}
+
+.page__content__number:hover{
+    border: 2px solid var(--border);
+    background-color: var(--main-backgroundy);
+    -webkit-box-shadow: 4px 4px 8px 0px #a4857a;
+    -moz-box-shadow: 4px 4px 8px 0px #a4857a;
+    box-shadow: 4px 4px 8px 0px #a4857a;
 }
 
 .active {

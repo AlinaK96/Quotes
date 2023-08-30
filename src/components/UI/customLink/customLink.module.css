@@ -1,5 +1,6 @@
 .link__fav,
 .link__fav:visited{
+    width: 200px;
     display: flex;
     justify-content: flex-end;
     font-size: 22px;
