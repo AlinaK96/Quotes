@@ -14,7 +14,7 @@ const FavQuotes = ({ favorites, onRemove }) => {
                             <hr />
                             <div className="quotes__box__footer">
                                 <span>{favorite.author}</span>
-                                <button className="favourites__btn" onClick={() => onRemove(favorite)}>удалить </button>
+                                <button className="favourites__btn" onClick={() => onRemove(favorite)} title="Удалить">удалить </button>
                             </div>
                         </div>
                     );
