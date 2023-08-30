@@ -15,8 +15,7 @@
     border: 1px solid var(--border);
     border-radius: 10px;
     position: relative;
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     -webkit-box-shadow: 4px 4px 8px 0px rgba(164, 133, 122, 0.32);
     -moz-box-shadow: 4px 4px 8px 0px rgba(164, 133, 122, 0.32);
     box-shadow: 4px 4px 8px 0px rgba(164, 133, 122, 0.32);
@@ -51,7 +50,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    max-width: 110px;
+    max-width: 155px;
 }
 
 .quotes__box img{
@@ -66,17 +65,6 @@
     border-radius: 20px;
     font-weight: 400;
 }
-
-.favourites__btn:hover{
-    background-color: var(--main-background);
-    transition: 0.6s;
-}
-
-.favourites__btn:not(:hover){
-    transition: 0.3s;
-}
-
-
 
 
 .tooltip {
@@ -106,16 +94,32 @@
 }
 
 .quotes__box:hover .tooltip {
-    top: -45px;
+    top: -50px;
     opacity: 1;
+    z-index: 5;
     visibility: visible;
     pointer-events: auto;
 }
-
 
 .quotes__box:hover,
 .quotes__box:hover .tooltip,
 .quotes__box:hover .tooltip::before {
     background: var(--background-secondary);
     color: #ffffff;
+}
+
+.quotes__box:hover .quotes__author{
+    color: white;
+}
+
+.quotes__box:hover hr{
+    background-color: white;
+}
+
+.quotes__box:hover button{
+    background-color: var(--main-background);
+}
+
+.quotes__box:hover button:hover{
+    opacity: .7;
 }
