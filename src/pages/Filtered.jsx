@@ -15,14 +15,12 @@ const FilteredList = ({quotes, setFavorites, favorites}) => {
     return (
         <div>
             <p className="favourites__header">Поиск: </p>
-            <div className="quotes__container filted">
-                <select value={author} onChange={e => setAuthor(e.target.value)} className="custom__select">
+            <select value={author} onChange={e => setAuthor(e.target.value)} className="custom__select">
                     <option>Поиск..</option>
                     {authors.map(i => <option>{i}</option>)}
                 </select>
-                <div className= { author === null ? 'none' : ''}>
+            <div className= { author === null ? 'none' : 'quotes__container'}>
                     {filteredquotes.map(i => <ListItem item={i} onClick={addToFavourites}/>)}
-                </div>
             </div>
         </div>
     )
