@@ -16,7 +16,7 @@ const FilteredList = ({quotes, setFavorites, favorites}) => {
 
     return (
         <div>
-            <p className="favourites__header">Поиск: </p>
+            <h1 className="favourites__header">Поиск: </h1>
             <select value={author} onChange={e => setAuthor(e.target.value)} className="custom__select">
                     <option>Поиск..</option>
                     {authors.map(i => <option>{i}</option>)}

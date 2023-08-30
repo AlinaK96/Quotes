@@ -2,9 +2,11 @@ import React from "react"
 import ToolTip from "./UI/tooltips/tooltip";
 
 const FavQuotes = ({ favorites, onRemove }) => {
+    
     return (
         <div>
-            <p className="favourites__header">Избранное: </p>
+            <h1 className="favourites__header">Избранное: </h1>
+            <h3 className={ favorites.length === 0 ? 'favourites__header' : 'none'}>Пока нет избранных цитат...</h3>
             <div className="quotes__container">
                 {favorites.map((favorite) => {
                     return (
