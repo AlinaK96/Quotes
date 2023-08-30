@@ -101,20 +101,11 @@
     pointer-events: auto;
 }
 
-.quotes__box:hover,
-.quotes__box:hover .tooltip,
+.quotes__box:hover.quotes__box:hover .tooltip,
 .quotes__box:hover .tooltip::before {
     border: 1px solid transparent;
-    background: var(--background-secondary);
+    background: var(--main-background);
     color: #ffffff;
-}
-
-.quotes__box:hover .quotes__author{
-    color: white;
-}
-
-.quotes__box:hover hr{
-    background-color: white;
 }
 
 .quotes__box:hover button{
