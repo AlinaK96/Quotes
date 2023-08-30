@@ -25,7 +25,11 @@ const Pagination = ({ pageLimit, quotes, setquotes }) => {
     };
     const getPageNumberGroup = () => {
         let start = Math.floor((currentPageNumber - 1) / 3) * 3;
-        return new Array(3).fill(" ").map((_, index) => start + index + 1);
+        if(currentPageNumber === pageLimit){
+            return new Array(1).fill(" ").map((_, index) => start + index + 1);
+        } else {
+            return new Array(3).fill(" ").map((_, index) => start + index + 1);
+        }
     };
 
     const addToFavourites = (item) => {
