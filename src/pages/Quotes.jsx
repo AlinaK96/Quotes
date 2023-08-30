@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
-import CustomBtn from "../components/UI/customLink/customLink";
+//import CustomBtn from "../components/UI/customLink/customLink";
 import QuotesList from '../components/QuotesList';
 import FilteredList from './Filtered';
 
@@ -21,7 +21,7 @@ function Quotes() {
 
     return (
         <div>
-            <CustomBtn title='Избранное' link='/Favourites'/>
+            {/* <CustomBtn title='Избранное' link='/Favourites'/> */}
             <FilteredList quotes={quotes} favorites={favorites} setFavorites={setFavorites} />
             <QuotesList pageLimit={10} quotes={quotes} setquotes={setquotes} favorites={favorites} setFavorites={setFavorites} />
         </div>
